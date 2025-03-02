@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+/* @plugin "flowbite/plugin";
+@source "../node_modules/flowbite"; */
+
+img{
+  display: block;
+}
+.containers {
+  background-image: url("./assets/images/ticket1.jpg");
+  background-color: transparent;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
+}
+
+.input-group {
+  width: 100%;
+  margin: 10px auto;
+  padding: 15px;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  display: grid;
+  font-weight: 600;
+  /* background-color: #b2b8d04d; */
+}
+
+.input-group input {
+  border: 1px solid white;
+  outline: 1px solid blue;
+  border-radius: 10px;
+  padding: 5px 8px;
+}
+.sidebar {
+  width: 100%;
+  display: grid;
+  /* justify-content: space-around; */
+  /* flex-flow: row wrap; */
+  grid-template-columns: 15% 85%;
+} 
+.sidebar_menu{
+  margin: 15px 0;
+  padding: 5px;
+  
+}
