@@ -26,8 +26,8 @@ const Navbar = () => {
     <nav className="bg-white w-screen font-bold">
       <div className="flex justify-between items-center py-4 px-8 flex-wrap">
         <div className="flex items-center">
-          <img src="/vite.svg" alt="Logo" className="h-8 w-8 mr-2" />
-          <span className="text-xl font-semibold">Movie Ticket</span>
+          {/* <img src="/vite.svg" alt="Logo" className="h-8 w-8 mr-2" /> */}
+          <span className="text-xl font-semibold">Tickets</span>
         </div>
         <div className="flex items-center">
           <Link to="/" className="text-gray-800 hover:text-gray-600 mr-4">

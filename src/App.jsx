@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="containers">
       <Navbar />
-      <div className=" flex flex-col w-full items-center">
-        <p className="text-center items-center text-6xl text-[white] mt-50 mb-20 mx-auto bg-black p-5">
+      <div className=" grid grid-cols-1 w-full items-center lg:flex flex-col">
+        <p className="text-center items-center text-6xl text-[white] my-20 mb-20 mx-auto bg-black p-5">
           Discover your favourite events
         </p>
         <p className="text-white items-center bg-black px-3 py-2 rounded-full">
