@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import TicketDetails from "../../components/ticketdetails";
 // import Navbar from "../../components/navbar";
@@ -25,10 +24,6 @@ function DashboardTickets() {
     }
   };
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -36,10 +31,10 @@ function DashboardTickets() {
   return (
     <div className="containers">
       {/* <Navbar /> */}
-      <div className="sidebar">
+      <div className="sidebar pb-20">
         <Sidebar />
         <div>
-          <div className="text-3xl font-bold my-5 text-white">
+          <div className="text-3xl font-bold m-5 text-white">
             Available Tickets
           </div>
           <div className="w-full grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 px-4">

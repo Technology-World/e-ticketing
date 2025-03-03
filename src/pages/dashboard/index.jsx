@@ -42,7 +42,7 @@ function DashboardHome() {
       {/* <Navbar /> */}
       <div className="sidebar">
       <Sidebar />
-      <div>
+      <div className="text-white font-bold p-5">
         <h2>Welcome {username} to Your Dashboard</h2>
       </div>
       </div>

@@ -75,9 +75,16 @@ const TicketDetails = () => {
         <h2 className="font-bold uppercase my-6 text-2xl text-white mb-[20px]">
               Ticket Details
             </h2>
-        <div className="py-3 w-[80%] grid grid-cols-1 text-white md:grid-cols-2 px-1">
+        <div className="py-3 w-full grid grid-cols-1 text-white font-bold md:grid-cols-2 gap-5 px-1">
+        <div className="h-auto mx-auto">
+            <img
+              src={tickets.banner}
+              alt={`Ticket ${id}`}
+              className="w-full h-[200px] md:h-[400px]"
+            />
+          </div>
           <div>
-            <p className="py-1.5 text-xl">
+            <p className="py-1.5 text-xl right">
               <span className="text-blue-400 font-bold">Ticket ID: </span>
               {id}
             </p>
@@ -106,13 +113,7 @@ const TicketDetails = () => {
               Buy Ticket
             </button>
           </div>
-          <div className="h-auto mx-auto">
-            <img
-              src={tickets.banner}
-              alt={`Ticket ${id}`}
-              className="w-full h-[200px] md:h-[400px]"
-            />
-          </div>
+          
         </div>
         </div>
       </div>

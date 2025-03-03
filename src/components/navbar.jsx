@@ -1,5 +1,5 @@
 // import { useState, useEffect } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   // const [username, setUsername] = useState("");
@@ -59,21 +59,21 @@ const Navbar = () => {
                 </button>
               </div>
             ) : ( */}
-              <div className="flex items-center gap-5">
-                <Link
-                  to="/login"
-                  className="text-white bg-green-600 p-2 rounded-lg hover:bg-[#f1f1f3] hover:text-black"
-                >
-                  Login
-                </Link>
-                <Link
-                  to="/signup"
-                  className="text-white bg-green-600 p-2 rounded-lg hover:bg-[#191b30] hover:text-white"
-                >
-                  Sign Up
-                </Link>
-              </div>
-            {/* )}
+          <div className="flex items-center gap-5">
+            <Link
+              to="/login"
+              className="text-white bg-green-600 p-2 rounded-lg hover:bg-[#f1f1f3] hover:text-black"
+            >
+              Login
+            </Link>
+            <Link
+              to="/signup"
+              className="text-white bg-green-600 p-2 rounded-lg hover:bg-[#191b30] hover:text-white"
+            >
+              Sign Up
+            </Link>
+          </div>
+          {/* )}
           </div> */}
         </div>
       </div>

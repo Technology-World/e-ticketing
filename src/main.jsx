@@ -13,8 +13,8 @@ import TicketDetails from "./pages/ticket/[id].jsx";
 import PaymentPage from "./pages/ticket/paymentPage.jsx";
 import SuccessfulPayment from "./pages/ticket/successfulPayment.jsx";
 import DashboardTickets from "./pages/dashboard/tickets.jsx";
-// import PurchasedTicket from "./pages/dashboard/[viewtickets].jsx";
 import UserTickets from "./pages/dashboard/usertickets.jsx";
+import Profile from "./pages/dashboard/userprofile.jsx";
 // import MainNavbar from "./components/mainNav";
 
 const root = document.getElementById("root");
@@ -35,6 +35,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/success-payment" element={<SuccessfulPayment />} />
       <Route path="/dashboard/tickets" element={<DashboardTickets />} />
       <Route path="/dashboard/purchasedticket" element={<UserTickets />} />
+      <Route path="/dashboard/:id" element={<Profile />} />
       {/* </Route> */}
     </Routes>
   </BrowserRouter>

@@ -7,7 +7,7 @@ img{
   display: block;
 }
 .containers {
-  background-image: url("./assets/images/ticket1.jpg");
+  background-image: url("./assets/images/ticket4.jpg");
   background-color: transparent;
   width: 100%;
   height: 100vh;
@@ -24,6 +24,7 @@ img{
   font-size: 25px;
   display: grid;
   font-weight: 600;
+ 
   /* background-color: #b2b8d04d; */
 }
 
@@ -32,6 +33,7 @@ img{
   outline: 1px solid blue;
   border-radius: 10px;
   padding: 5px 8px;
+  background-color: white;
 }
 .sidebar {
   width: 100%;

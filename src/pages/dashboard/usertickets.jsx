@@ -1,12 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import ViewTickets from "../../components/viewtickets";
 import Sidebar from "../../components/sidebar";
 import Footer from "../../components/footer";
+import { useNavigate } from "react-router-dom";
 
 const UserTickets = () => {
   const [tickets, setTickets] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const accessToken = localStorage.getItem("accessToken");
   const loggedInUserId = localStorage.getItem("username"); // Assuming user ID is stored here
@@ -39,6 +42,7 @@ const UserTickets = () => {
         setTickets(userTickets);
       } catch (err) {
         setError(err.message);
+        setTimeout(() => navigate("/dashboard"), 3000);
       } finally {
         setLoading(false);
       }
@@ -61,18 +65,20 @@ const UserTickets = () => {
       </div>
       </div>;
   }
-  if (error) return <p className="text-red-500">Error: {error}</p>;
+  if (error) {
+    return <p className="text-red-500">Error: {error}</p>
+};
 
   return (
     <div className="containers">
       <div className="sidebar pb-20">
         <Sidebar />
-        <div>
-          <h2 className="text-2xl font-bold mb-4 px-4">My Purchased Tickets</h2>
+        <div className="m-5">
+          <h2 className="text-2xl font-bold mb-4 px-4 text-white">My Purchased Tickets</h2>
           {tickets.length === 0 ? (
             <p>No tickets purchased yet.</p>
           ) : (
-            <div className="w-full grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 px-4">
+            <div className="w-full grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 bg-[#ffffffbd] text-black p-5">
               {tickets.map((user) => (
                 <div key={user.id}>
                   <ViewTickets

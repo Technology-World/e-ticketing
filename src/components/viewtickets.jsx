@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 function ViewTickets (props) {
     return (
-        <div className="w-full  bg-blue-500">
-        <div className="p-5 font-sans text-white">
+        <div className="w-full  bg-[#02040aa6] rounded-lg">
+        <div className="p-7 font-sans text-white">
           <p><span className="font-bold">Reference Id: </span>{props.ReferenceId}</p>
           <p><span className="font-bold">User Id: </span>{props.host}</p>
           <p><span className="font-bold">Username: </span>{props.user}</p>

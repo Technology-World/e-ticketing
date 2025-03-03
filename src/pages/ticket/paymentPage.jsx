@@ -59,7 +59,7 @@ const PaymentPage = () => {
     <div className="containers">
       <div className="sidebar">
         <Sidebar />
-    <div className="text-center p-10">
+    <div className="text-center p-10 text-white">
       <h2 className="text-2xl font-bold">Processing Payment...</h2>
       {!paymentUrl && <p target="_blank">Please wait while we redirect you to Paystack.</p>}
       {paymentUrl && (

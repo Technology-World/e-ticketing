@@ -3,7 +3,7 @@ import {Link}  from "react-router-dom";
 function TicketDetails(props) {
   
   return (
-    <div className=" bg-blue-500 ">
+    <div className=" bg-blue-500 rounded-lg">
       <Link to={`/ticket/${props.id}`}>
         <div className="w-full h-[200px] object-cover rounded-lg overflow-hidden md:h-[25px] lg:h-[300px]">
           <img

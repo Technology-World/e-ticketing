@@ -23,7 +23,7 @@ const Sidebar = () => {
   };
   return (
     <aside>
-      <div className="bg-white w-auto h-[100vh] py-3 px-5 text-[#2a221d] font-medium text-lg flex flex-col pt-8 fixed">
+      <div className="w-full h-auto flex sm:text-sm bg-white justify-between py-3 px-5 items-center lg:items-start lg:justify-normal text-[#2a221d] font-medium lg:text-lg lg:flex-col lg:pt-8 fixed lg:w-auto lg:h-[100vh]">
         <Link to="/dashboard" className="text-green-500 mr-4 capitalize">
           Welcome, {username}
         </Link>
@@ -36,7 +36,7 @@ const Sidebar = () => {
         <Link to="/dashboard/purchasedticket" className="sidebar_menu">
           View tickets purchased
         </Link>
-        <Link to="#" className="sidebar_menu">
+        <Link to="/dashboard/profile" className="sidebar_menu">
           Profile
         </Link>
         <button

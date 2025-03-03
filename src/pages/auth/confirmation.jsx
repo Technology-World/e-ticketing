@@ -53,7 +53,7 @@ const Confirmation = () => {
   return (
     <div className="containers">
       <Navbar />
-      <div className="w-auto mx-auto mt-20 bg-[#5470e04d] py-10 px-5 rounded-2xl font-sans text-lg lg:w-[700px]">
+      <div className="w-auto mx-auto mt-20 bg-[#5470e04d] py-10 px-5 rounded-2xl font-sans text-lg lg:w-[700px] text-white">
         <h2 className="text-center pb-5 font-bold text-xl lg:text-3xl">
           Please confirm your details before submitting
         </h2>

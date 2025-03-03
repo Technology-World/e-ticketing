@@ -4,7 +4,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 const SuccessfulPayment = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const reference_id = searchParams.get("reference"); // Correct way to get query params
+  const reference_id = searchParams.get("reference");
 
   console.log("Reference ID:", reference_id);
 
