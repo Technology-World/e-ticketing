@@ -78,7 +78,7 @@ const Login = () => {
             <div className="input-group">
               <label className="text-sm">Email or Username</label>
               <input
-                type="text"
+                type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}

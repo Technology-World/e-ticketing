@@ -42,7 +42,7 @@ const UserTickets = () => {
         setTickets(userTickets);
       } catch (err) {
         setError(err.message);
-        setTimeout(() => navigate("/dashboard"), 3000);
+        setTimeout(() => navigate("/dashboard"), 1000);
       } finally {
         setLoading(false);
       }

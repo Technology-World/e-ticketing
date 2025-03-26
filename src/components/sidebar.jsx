@@ -27,6 +27,9 @@ const Sidebar = () => {
         <Link to="/dashboard" className="text-green-500 mr-4 capitalize">
           Welcome, {username}
         </Link>
+        <Link to="/" className="sidebar_menu">
+          Home
+        </Link>
         <Link to="/dashboard" className="sidebar_menu">
           Dashboard
         </Link>

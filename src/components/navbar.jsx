@@ -1,26 +1,26 @@
-// import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  // const [username, setUsername] = useState("");
-  // const [loading, setLoading] = useState(false);
-  // const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   const storedUsername = localStorage.getItem("username");
-  //   if (storedUsername) {
-  //     setUsername(storedUsername);
-  //   }
-  // }, []);
+  useEffect(() => {
+    const storedUsername = localStorage.getItem("username");
+    if (storedUsername) {
+      setUsername(storedUsername);
+    }
+  }, []);
 
-  // const handleLogout = () => {
-  //   localStorage.removeItem("accessToken");
-  //   localStorage.removeItem("username");
-  //   localStorage.removeItem("userId");
-  //   navigate("/login");
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("username");
+    localStorage.removeItem("userId");
+    navigate("/login");
 
-  //   setLoading(true);
-  // };
+    setLoading(true);
+  };
 
   return (
     <nav className="bg-white w-screen font-bold">
@@ -42,12 +42,12 @@ const Navbar = () => {
           >
             Tickets
           </Link>
-          <a href="#" className="text-gray-800 hover:text-gray-600 ">
+          {/* <a href="#" className="text-gray-800 hover:text-gray-600 ">
             Contact
-          </a>
+          </a> */}
         </div>
         <div className="flex items-center">
-          {/* <div>
+          <div>
             {username ? (
               <div className="flex items-center">
                 <Link to = "/dashboard" className="text-gray-800 mr-4">{username}</Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
                   {loading ? "Logging out..." : "Logout"}
                 </button>
               </div>
-            ) : ( */}
+            ) : (
           <div className="flex items-center gap-5">
             <Link
               to="/login"
@@ -73,8 +73,8 @@ const Navbar = () => {
               Sign Up
             </Link>
           </div>
-          {/* )}
-          </div> */}
+           )}
+          </div>
         </div>
       </div>
     </nav>

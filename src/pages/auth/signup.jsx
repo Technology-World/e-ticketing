@@ -51,7 +51,7 @@ const SignUp = () => {
           <div className="input-group">
             <label htmlFor="username">Email: </label>
             <input
-              type="text"
+              type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
