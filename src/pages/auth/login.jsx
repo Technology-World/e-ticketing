@@ -67,15 +67,15 @@ const Login = () => {
   return (
     <div className="containers">
       <Navbar/>
-      <div className="flex items-center pl-12 md:px-10">
-        <div className="w-auto mx-auto mt-20 bg-[#b2b8d04d] py-10 px-5 rounded-2xl lg:w-[700px]">
+      <div className="flex items-center p-5 md:px-10">
+        <div className="w-full mx-auto mt-20 bg-[#b2b8d04d] py-10 px-5 rounded-2xl lg:w-[700px]">
           <h1 className="text-2xl font-bold text-center uppercase">Login</h1>
           <p className="text-[#231f40] font-black">
             Welcome back! Please enter your details.
           </p>
 
           <form className="mt-8 space-y-4" onSubmit={handleLogin}>
-            <div className="input-group">
+            <div className="input-group text-[15px] md:text-[25px]">
               <label className="text-sm">Email or Username</label>
               <input
                 type="email"
@@ -87,7 +87,7 @@ const Login = () => {
               />
             </div>
 
-            <div className="input-group relative">
+            <div className="input-group text-[15px] md:text-[25px] relative">
               <div className="flex items-center justify-between text-sm">
                 <label>Password</label>
                 <Link to="/" className="text-white">
@@ -118,7 +118,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="bg-purple-500 text-white px-3 py-3 hover:bg-purple-700 w-full rounded-lg"
+              className="bg-purple-500 text-white px-8 py-3 hover:bg-purple-700 w-auto rounded-lg cursor-pointer flex m-auto justify-center"
             >
               {loading ? "Logging in..." : "Login"}
             </button>

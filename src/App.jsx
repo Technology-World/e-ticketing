@@ -8,11 +8,11 @@ function App() {
   return (
     <div className="containers">
       <Navbar />
-      <div className=" grid grid-cols-1 w-full items-center lg:flex flex-col">
-        <p className="text-center items-center text-6xl text-[white] my-20 mb-20 mx-auto bg-black p-5">
+      <div className=" grid grid-cols-1 w-full items-center md:flex flex-col p-5">
+        <p className="md:text-center items-center text-3xl md:text-6xl text-[white] my-20 mb-20 mx-auto bg-black md:p-5">
           Discover your favourite events
         </p>
-        <p className="text-white items-center bg-black px-3 py-2 rounded-full">
+        <p className="w-auto text-white items-center md:bg-gray-900 md:px-3 py-2 rounded-full">
           Buy ticket, Host and promote your events
         </p>
         <p className="text-white items-center pt-5">

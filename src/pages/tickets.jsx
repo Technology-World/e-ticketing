@@ -31,7 +31,7 @@ function AvailTickets() {
   return (
     <div className="containers">
       <Navbar />
-      <div>
+      <div className="text-red-700">
         <div className="text-3xl font-bold m-5 text-white">
           Available Tickets
         </div>

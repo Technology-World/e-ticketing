@@ -6,9 +6,9 @@ function About() {
     return (
         <div className='containers'>
         <Navbar />
-        <div className="mx-30 grid grid-cols-1 items-center gap-15 bg-[#ffffff98] text-black my-15 justify-center p-10 lg:flex md:grid-cols-2">
-            <img src={aboutImage} alt="About us" className = "w-[600px] text-white"/>
-            <div className=" text-center py-10 mx-auto w-[100%]">
+        <div className="w:full mx:5 lg:mx-30 grid grid-cols-1 items-center md:gap-15 bg-[#ffffff98] text-black my-15 justify-center p-5 md:px-10 lg:flex">
+            <img src={aboutImage} alt="About us" className = "lg:w-[600px] text-white object-contain"/>
+            <div className=" lg:text-center py-10 mx-auto w-[100%]">
                 <h1 className="text-neutral-600 text-5xl font-semibold pb-5">About Us</h1>
                 <p className="text-lg font-medium">We understand the power of a live event - the electric atmosphere, the shared emotions, and the memories that last a lifetime. That&#39;s why we have made it our mission to revolutionize the ticketing industry, combining cutting-edge technology with a passion for delivering exceptional experiences.</p>
             </div>

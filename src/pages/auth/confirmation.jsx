@@ -24,7 +24,7 @@ const Confirmation = () => {
 
   const confirmSubmit = async () => {
     setLoading(true);
-    setError("");
+    setError(""); // reset error
 
     try {
       const response = await fetch(
@@ -35,20 +35,24 @@ const Confirmation = () => {
           body: JSON.stringify(formData),
         }
       );
+
       const data = await response.json();
+
       if (response.ok) {
         alert("Signup successful!");
-        navigate("/login"); // Redirect to homepage or dashboard
+        navigate("/login");
       } else {
         console.error("Sign Up failed:", data.message);
-        alert(data.message);
+        setError(data.message || "Signup failed. Please try again.");
       }
-    } catch (error) {
-      setError(error, "Signup failed. Please try again.");
+    } catch (err) {
+      console.error("Network error:", err);
+      setError("Unable to connect to the server. Please try again later.");
     } finally {
       setLoading(false);
     }
   };
+
 
   return (
     <div className="containers">
@@ -58,13 +62,13 @@ const Confirmation = () => {
           Please confirm your details before submitting
         </h2>
         <p className="py-3">
-          <strong className="text-2xl">Username:</strong> {formData.username}
+          <strong className="text-lg md:text-2xl">Username:</strong> {formData.username}
         </p>
         <p className="py-3">
-          <strong className="text-2xl">Email:</strong> {formData.email}
+          <strong className="text-lg md:text-2xl">Email:</strong> {formData.email}
         </p>
         <p className="py-3">
-          <strong className="text-2xl">Password:</strong>{" "}
+          <strong className="text-lg md:text-2xl">Password:</strong>{" "}
           {showPassword
             ? formData.password
             : "•".repeat(formData.password.length)}
@@ -77,17 +81,17 @@ const Confirmation = () => {
         </p>
 
         {error && <p style={{ color: "red" }}>{error}</p>}
-        <div className="grid justify-center lg:flex gap-3 w-full">
+        <div className="justify-center flex gap-3 w-full">
           <button
             onClick={confirmSubmit}
             disabled={loading}
-            className="bg-blue-400 w-30% rounded-2xl text-lg py-2 px-3 text-white hover:bg-white hover:text-green-700 cursor-pointer"
+            className="bg-blue-400 w-auto rounded-2xl text-sm md:text-lg py-2 px-3 text-white hover:bg-white hover:text-green-700 cursor-pointer"
           >
             {loading ? "Submitting..." : "Confirm & Register"}
           </button>
           <button
             onClick={() => navigate("/signup", { state: formData })}
-            className="bg-blue-400 w-30 rounded-2xl text-lg p-2 text-white hover:bg-white hover:text-green-700 cursor-pointer"
+            className="bg-blue-400 w-30 rounded-2xl text-sm md:text-lg p-2 text-white hover:bg-white hover:text-green-700 cursor-pointer"
           >
             Edit
           </button>{" "}
